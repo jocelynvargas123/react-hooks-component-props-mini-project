@@ -1,8 +1,9 @@
 import React from "react";
 import Article from "./Article"
 
-function ArticleList(prop){
-    const articles = prop.map((art)=> {
+function ArticleList({posts}){
+    console.log(posts)
+    const articles = posts.map((art)=> {
         return (
         <Article key={art.id} title={art.title} date={art.date} preview={art.preview}/>
         )
